@@ -1,0 +1,39 @@
+{
+  "name": "mitt-with-once",
+  "version": "1.0.0",
+  "source": "src/index.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "module": "./dist/mitt.mjs",
+    "import": "./dist/mitt.mjs",
+    "require": "./dist/mitt.js",
+    "default": "./dist/mitt.mjs"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register test/index_test.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BHznJNs/mitt-with-once.git"
+  },
+  "keywords": [],
+  "author": "BHznJNs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BHznJNs/mitt-with-once/issues"
+  },
+  "homepage": "https://github.com/BHznJNs/mitt-with-once#readme",
+  "description": "",
+  "dependencies": {
+    "mitt": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^7.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

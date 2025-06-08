@@ -1,0 +1,25 @@
+on:
+  push:
+    branches: main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+
+      - run: npm i
+      - run: npm run build
+      - run: npm test
+
+      - uses: preactjs/compressed-size-action@v2
+        with:
+          pattern: "./dist/*.{js,mjs,cjs}"
+
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          access: public
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
