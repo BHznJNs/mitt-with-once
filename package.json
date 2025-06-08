@@ -1,23 +1,31 @@
 {
   "name": "mitt-with-once",
   "version": "1.0.0",
+  "type":"module",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "jsnext:main": "dist/index.mjs",
+  "umd:main": "dist/index.umd.js",
   "source": "src/index.ts",
   "exports": {
-    "types": "./index.d.ts",
-    "module": "./dist/mitt.mjs",
-    "import": "./dist/mitt.mjs",
-    "require": "./dist/mitt.js",
-    "default": "./dist/mitt.mjs"
+    "types": "./dist/index.d.ts",
+    "module": "./dist/index.mjs",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js",
+    "default": "./dist/index.mjs"
   },
   "scripts": {
     "test": "mocha -r ts-node/register test/index_test.ts",
-    "build": "tsc"
+    "generate-types": "tsc --declaration --emitDeclarationOnly",
+    "bundle": "microbundle"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BHznJNs/mitt-with-once.git"
   },
-  "keywords": [],
+  "keywords": [
+    "pubsub"
+  ],
   "author": "BHznJNs",
   "license": "MIT",
   "bugs": {
@@ -32,6 +40,7 @@
     "@types/chai": "^4.3.20",
     "@types/mocha": "^7.0.2",
     "chai": "^4.2.0",
+    "microbundle": "^0.15.1",
     "mocha": "^8.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
