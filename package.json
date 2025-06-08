@@ -1,7 +1,7 @@
 {
   "name": "mitt-with-once",
   "version": "1.0.0",
-  "type":"module",
+  "type": "module",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.mjs",
@@ -15,7 +15,7 @@
     "default": "./dist/index.mjs"
   },
   "scripts": {
-    "test": "mocha -r ts-node/register test/index_test.ts",
+    "test": "mocha -r tsx test/index_test.ts",
     "generate-types": "tsc --declaration --emitDeclarationOnly",
     "bundle": "microbundle"
   },
@@ -42,7 +42,7 @@
     "chai": "^4.2.0",
     "microbundle": "^0.15.1",
     "mocha": "^8.0.1",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   }
 }
